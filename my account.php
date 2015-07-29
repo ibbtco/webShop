@@ -24,6 +24,12 @@ if (!isset($_SESSION['username'])){
         if (footerTop < docHeight) {
             $('#footer').css('margin-top', (docHeight - footerTop - 55) + 'px');
         }
+		if (screen.width <= 640){
+			$("#my account").css("width", "100%");
+			$("#my account").css("font-size","14px");
+			$("#my orders").css("width", "100%");
+			$("#my orders").css("font-size","10px");
+		}
     });
 </script>
 <script>
@@ -58,7 +64,15 @@ body {
     text-align: center;
     color: #3D3D3D;
 }
-#products {
+#my account {
+    width: 75%;
+    font: Bariol;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+	max-height: 750px;
+}
+#my orders {
     width: 75%;
     font: Bariol;
     font-size: 18px;
@@ -99,7 +113,7 @@ body {
 </nav>
 
 <div class="container-fluid" align="center">
-    <div id ="products" class="panel panel-default">
+    <div id ="my account" class="panel panel-default">
       <div class="panel-heading" align="center">Your account</div>
       <div class="panel-body">
 		<div style="top:1px; left:5px;" align="left">Email: <?php echo $_SESSION['email']; echo '   <a href="emailchange.php"><span class="label label-primary" style="float:right;">Change email</span></a>'; ?></div>
@@ -115,7 +129,7 @@ body {
   </div>
   
   <div class="container-fluid" align="center">
-    <div id ="products" class="panel panel-default">
+    <div id ="my orders" class="panel panel-default">
       <div class="panel-heading" align="center">Your orders</div>
       <div class="panel-body">
 

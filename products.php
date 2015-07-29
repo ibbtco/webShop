@@ -23,7 +23,7 @@ session_start();
 		
 		$(".price").fitText(0.4, { minFontSize: '13px', maxFontSize: '20px' });
 		$(".pname").fitText(2, { minFontSize: '10px', maxFontSize: '20px' });
-		if (screen.width < 640){
+		if (screen.width <= 640){
 			$("#products").css("width", "100%");
 			$(".price").css("left","80%");
 		}
