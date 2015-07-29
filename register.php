@@ -3,9 +3,9 @@ session_start();
 require('connect.php');
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])){
-        $username = stripslashes($_POST['username']);
-		$email = stripslashes($_POST['email']);
-        $password = stripslashes($_POST['password']);
+        $username = mysqli_real_escape_string($connection,$_POST['username']);
+		$email = mysqli_real_escape_string($connection,$_POST['email']);
+        $password = mysqli_real_escape_string($connection,$_POST['password']);
 		$e = $connection->query("SELECT email FROM user WHERE email = '" . $email ."'"); 
 		$u = $connection->query("SELECT username FROM user WHERE username = '" . $username . "'");
 		if ($u->num_rows != 0)

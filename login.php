@@ -3,8 +3,8 @@ session_start();
 require('connect.php');
 
 if (isset($_POST['username']) and isset($_POST['password'])){
-$username =  stripslashes($_POST['username']);
-$password =  stripslashes($_POST['password']);
+$username =  mysqli_real_escape_string($connection,$_POST['username']);
+$password =  mysqli_real_escape_string($connection,$_POST['password']);
 $query = "SELECT * FROM user WHERE username = '" . $username ."' and password='".$password."' " ;
 $result = $connection->query($query) or die($connection->error);
 $count = $result->num_rows;
