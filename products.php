@@ -7,6 +7,7 @@ session_start();
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="jquery.fittext.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,6 +20,13 @@ session_start();
         if (footerTop < docHeight) {
             $('#footer').css('margin-top', (docHeight - footerTop - 55) + 'px');
         }
+		
+		$(".price").fitText(0.4, { minFontSize: '13px', maxFontSize: '20px' });
+		$(".pname").fitText(2, { minFontSize: '10px', maxFontSize: '20px' });
+		if (screen.width < 640){
+			$("#products").css("width", "100%");
+			$(".price").css("left","80%");
+		}
     });
 </script>
 <script>
@@ -45,7 +53,7 @@ body {
     height: 40px;
     padding: 15px 0 0 0;
     border-top: 1px solid #CAD0D6;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .footerText {
     font-family: 'Open Sans', sans-serif;
@@ -54,7 +62,7 @@ body {
     color: #3D3D3D;
 }
 #products {
-    width: 75%;
+    width: 82%;
     font: Bariol;
     font-size: 18px;
     -webkit-user-select: none;
@@ -163,7 +171,7 @@ position:absolute;
 	left: 1% !important;
 }
 .price{
-	left:90%;
+	left:91%;
 	top:60%;
 	position:absolute;
 }
@@ -280,7 +288,7 @@ position:absolute;
          <div class="thumbnail">
             <img class="img-responsive" src="product3.png" width="800" height="300" alt="">
             <div class="caption-full">
-               <h4 class="pull-right"><a href="http://gobets.pw/infoeducatia/webShop/v1.1/purchase.php?key=p3"><button type="button" class="btn btn-success">Buy at $159</button></a></h4>
+               <h4 class="pull-right"><a href="http://gobets.pw/infoeducatia/webShop/v1.1/purchase.php?key=p3"><button type="button" class="btn btn-success">Buy at $87</button></a></h4>
                <h4>CS:GO Softshell Jacket</h4>
                <p>Functional soft-shell jacket with comfortable fleece lining.<br> 
                   <b>Materials:</b> <br>Front: 94% Polyester 6% Spandex<br>
@@ -420,32 +428,32 @@ position:absolute;
    <li class="list-group-item">
     <img src="product1.png" width="64" height="64">
 	<div class="details"><a href="#" data-toggle="modal" data-target="#popup-1"><button type="button" class="btn btn-default">Product Details</button></a></div>
-	<div class="price">Price: $27,00</div>
-    CS:GO Guardian T-Shirt - Navy Blue
+	<div class="price">Price: $27</div>
+    <div class="pname">CS:GO Guardian T-Shirt - Navy Blue</div>
 	</li>
    <li class="list-group-item">
     <img src="product2.png" width="64" height="64">
 	<div class="details"><a href="#" data-toggle="modal" data-target="#popup-2"><button type="button" class="btn btn-default">Product Details</button></a></div>
-	<div class="price">Price: $10,00</div>
-    CS:GO Mug
+	<div class="price">Price: $10</div>
+    <div class="pname">CS:GO Mug</div>
 	</li>
 	<li class="list-group-item">
     <img src="product3.png" width="64" height="64">
 	<div class="details"><a href="#" data-toggle="modal" data-target="#popup-3"><button type="button" class="btn btn-default">Product Details</button></a></div>
-	<div class="price">Price: $159,00</div>
-    CS:GO Softshell Jacket
+	<div class="price">Price: $87</div>
+    <div class="pname">CS:GO Softshell Jacket</div>
 	</li>
 	<li class="list-group-item">
     <img src="product4.png" width="64" height="64">
 	<div class="details"><a href="#" data-toggle="modal" data-target="#popup-4"><button type="button" class="btn btn-default">Product Details</button></a></div>
-	<div class="price">Price: $20,00</div>
-    CS:GO Globe Mousepad
+	<div class="price">Price: $20</div>
+    <div class="pname">CS:GO Globe Mousepad</div>
 	</li>
 	<li class="list-group-item">
     <img src="product5.png" width="64" height="64">
 	<div class="details"><a href="#" data-toggle="modal" data-target="#popup-5"><button type="button" class="btn btn-default">Product Details</button></a></div>
-	<div class="price">Price: $99,00</div>
-    CS:GO Reversible Vest
+	<div class="price">Price: $99</div>
+    <div class="pname">CS:GO Reversible Vest</div>
 	</li>
 </ul>
 		</div>
