@@ -3,11 +3,11 @@ session_start();
 require 'connect.php';
 include "/home/goberdns/public_html/admin/mail.php";
 
-$id ="e1092ff7-fc7f-4aa6-a6be-0b6a549e46f8";
-$pw = "iKilledchu12.";
+$id ="";
+$pw = "";
 
-$secret = "f8fe526080ec3366eddbb498c6df4e1a";  //md5 hash a unui cuvant
-$address = "1MBF4cGmVac3r561YYRcamqJKN269yk7aD"; 
+$secret = "";  //md5 hash a unui cuvant
+$address = ""; 
 
 if ($_GET['test'] == "true") {
      echo 'Ignoring Test Callback';
