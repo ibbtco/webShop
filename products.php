@@ -199,10 +199,13 @@ position:absolute;
 				<div class="loginmodal-container">
 					<h1>Login to Your Account</h1><br>
 					<div id="login_error"></div>
-				  <form  action="login.php" method="post">
-					<input type="text" name="user" placeholder="Username" value="">
-					<input type="password" name="pass" placeholder="Password" value="">
+				  <form action="login.php" method="POST">
+					<fieldset>
+					<input id = "user" type="text" name="username" placeholder="Username" value="">
+					<input id="pass" type="password" name="password" placeholder="Password" value="">
 					<input type="submit" class="login loginmodal-submit">
+					
+					</fieldset>
 				  </form>
 				</div>
 			</div>
@@ -212,9 +215,9 @@ position:absolute;
 				<div class="loginmodal-container">
 					<h1>Register an Account</h1><br>
 					<div id="register_error"></div>
-				  <form  action="register.php" method="post">
-					<input type="text" name="user" placeholder="Username" value="">
-					<input type="password" name="pass" placeholder="Password" value="">
+				  <form  action="register.php" method="POST">
+					<input type="text" name="username" placeholder="Username" value="" maxlength="10>
+					<input type="password" name="password" placeholder="Password" value="" maxlength="10>
 					<input type="text" name="email" placeholder="Email" value="">
 					<input type="submit" class="login loginmodal-submit">
 				  </form>

@@ -19,6 +19,9 @@ session_start();
         if (footerTop < docHeight) {
             $('#footer').css('margin-top', (docHeight - footerTop - 55) + 'px');
         }
+		if (screen.width <= 640){
+			$("#home").css("width", "100%");
+		}
     });
 </script>
 <script>
