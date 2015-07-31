@@ -80,8 +80,4 @@ if ($value >= $price){
 echo "There was an error, the amount paid is probably less than the price of the product!</br>";
 echo "Amount to be paid: " . $price . "</br>" . "Amount paid: " . $value;
 }
-
-
- 
- 
 ?>
